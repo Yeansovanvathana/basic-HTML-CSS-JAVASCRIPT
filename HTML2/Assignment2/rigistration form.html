@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>rigistration form</title>
+	<script>
+		function letters_number()
+	{
+		var name=document.register.name.value;
+		var password=document.register.password.value;
+		r=/^[A-Za-z]\w{7,14}$/;
+		if(password.match(r))
+		{
+			alert('you register number have accepted');
+			return true;
+		}
+		else if (password.length<6) 
+		{
+			alert('Password must be at least 6 characters long.');
+			return false;
+		}
+	}
+		
+	</script>
+</head>
+<body>
+	<form name="register" method="post" onsubmit="return letters_number()">
+	<table cellpadding="5" cellspacing="5" width="20%" bgcolor="#EFECDB" align="center">
+	<tr>
+		<td colspan="2" bgcolor="white" style="text-align: center;" >
+			<font><h1>Registratioin Form</h1></font>
+		</td>
+	</tr>
+				
+	<tr>
+		<td>
+			Name:<br>
+			<input type="text" name="name" placeholder="name"><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Password:<br>
+			<input type="password" name="password" placeholder="password"><br/>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" value="register"></td>
+	</tr>
+	</table>
+</form>
+</body>
+</html>

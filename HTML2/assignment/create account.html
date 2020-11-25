@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>registration form</title>
+	<script>
+		function letters_number()
+	{
+		var name=document.register.name.value;
+		var password=document.register.password.value;
+		r=/^[A-Za-z]\w{7,14}$/;
+		if(password.match(r))
+		{
+			alert('you register number have accepted');
+			return true;
+		}
+		else if (password.length<6) 
+		{
+			alert('Password must be at least 6 characters long.');
+			return false;
+		}
+	}
+		
+	</script>
+</head>
+<body background="white">
+	<div>
+		<center>
+		<form method="post" name="register" onsubmit="return letters_number()>
+			<font color="#0A0800">
+			<table cellpadding="5" cellspacing="5" width="20%" bgcolor="#EFECDB" aling="center">
+				<tr>
+					<td colspan="2" bgcolor="white" style="text-align: center;" ><font><h1>Create Account</h1></font></td>
+				</tr>
+				
+			<tr>
+				<td>
+					Name:<br>
+					<input type="text" name="FirstName" placeholder="Enter your first name">
+				</td>
+				<td>
+					LastName:<br>
+					<input type="text" name="last" placeholder="Enter your last name">
+				</td>	
+			</tr>
+			<tr>
+				<td colspan="2">
+					Email:<br>
+				<input type="mail" name="Email" placeholder= "Enter your email" maxlength="300" style="width: 425px;" />
+				</td>			
+			</tr>
+			<tr>
+				<td>
+					Password:<br>
+					<input type="password" name="pwd" placeholder="Enter your password">
+
+				</td>
+				<td>
+					Confirm password:<br>
+					<input type="password" name="Cpwd" placeholder="Enter your password again">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+				Gender:<br>
+				<input type="radio" name="gender">male
+				<input type="radio" name="gender">female
+				</td>
+				<td>
+					Hobbies:<br>
+					<input type="checkbox" name="music">Music
+					<input type="checkbox" name="sports">Sport
+					<input type="checkbox" name="travel">Travel
+					<input type="checkbox" name="movies">Movies
+
+				</td>			
+			</tr>
+			<tr>
+				<td>
+					date:<br>
+					<input type="date" name="date">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Source of Income:<br>
+					<select>
+						<option>Employed</option>
+					</select>
+				</td>
+				<td>
+					Income:<br>
+					<input type="range" min="0" max="20k">20K
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Upload Profile Picture: <br>
+					<input type="file" name="my file">
+				</td>
+				<td>
+					Age <br>
+					<input type="Age" name="Age">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					Bio <br>
+					<textarea name="message" cols="58" rows="5"></textarea>
+				</td>
+			</tr>	
+			
+			<tr><td><input type="submit" value="register"></td></tr>			
+			
+			</table>
+			
+		</form>
+	</div>
+
+
+ </style>
+</body>
+</html>

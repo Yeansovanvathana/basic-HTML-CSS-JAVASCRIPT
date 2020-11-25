@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script>
+	function cars(car_brand,car_model,price)
+		{
+			this.car_brand=car_brand;
+			this.car_model=car_model;
+			this.price=price;
+			this.testal=function()
+			{
+				document.write('<marquee>this car has atomatic pilot </marquee>');
+
+			}
+		}
+		var c1=new cars('tesla','model_3',35000)
+		var c2=new cars('bmw','model_4',45000)
+		c1.testal()
+		document.write('<h2>'+c2.car_model+'<h2>');
+		var str=new String()
+		document.write('<h2>'+typeof(str)+'</h2>')
+
+</script>
+<body>
+</body>
+</html>

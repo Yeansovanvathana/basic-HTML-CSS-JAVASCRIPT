@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>UI DESIGNING</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style type="text/css">
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: "Roboto Cn", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #eee;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,.😎, rgba(0,0,0,.5)), url("file:///D:/UI%20DESIGNING/UI%20DESIGNING/SOURCE/2.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+  overflow: hidden;
+}
+
+.container{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.menu-toggle{
+    position: fixed;
+    top: 2.5rem;
+    right: 2.5rem;
+    color: #eeeeee;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+}
+
+nav{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+.brand{
+    font-size: 3rem;
+    font-weight: 300;
+    transform: translateX(-100rem);
+    animation: slideIn .5s forwards;
+}
+
+.brand span{
+    color: crimson;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    list-style: none;
+    transform: translateX(100rem);
+    animation: slideIn .5s forwards;
+}
+
+nav ul li:nth-child(1){
+    animation-delay: 0s;
+}
+
+nav ul li:nth-child(2){
+    animation-delay: .5s;
+}
+
+nav ul li:nth-child(3){
+    animation-delay: 1s;
+}
+
+nav ul li:nth-child(4){
+    animation-delay: 1.5s;
+}
+
+nav ul li a{
+    padding: 1rem 0;
+    margin: 0 3rem;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+nav ul li a:last-child{
+    margin-right: 0;
+}
+
+nav ul li a::before,
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: crimson;
+    left: 0;
+    transform: scaleX(0);
+    transition: all .5s;
+}
+
+nav ul li a::before{
+    top: 0;
+    transform-origin: left;
+}
+
+nav ul li a::after{
+    bottom: 0;
+    transform-origin: right;
+}
+
+.overlay{
+    background-color: rgba(0,0,0,.95);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: opacity 650ms;
+    transform: scale(0);
+    opacity: 0;
+  display: none;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+    transform: scaleX(1);
+}
+
+@keyframes slideIn {
+    from{
+
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 700px){
+
+    .menu-toggle{
+        display: block;
+    }
+
+    nav{
+        padding-top: 0;
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+
+    nav ul li{
+        margin-top: 5rem;
+    }
+
+    nav ul li a{
+        margin: 0;
+        font-size: 2.5rem;
+    }
+
+    .brand{
+        font-size: 5rem;
+    }
+  
+  .overlay.menu-open,
+  nav.menu-open{
+      display: flex;
+      transform: scale(1);
+      opacity: 1;
+  }
+  
+}
+/*text on photo */
+    .slider, .slider ul, .slider ul li
+{
+    top: -10px;
+    height: 95%;
+    width: 105%;
+    color: white;
+    left: -40px;
+    text-align: center;
+    align-items: center;
+    display: grid;
+    justify-content: center;
+}
+    .slider h1
+{
+    font-weight: bolder;
+    font-size: 32px;
+    margin-top: 300px;
+}
+
+.span1
+{
+    color:orange;
+    font-size: 52px;
+}
+.span2
+{
+    color:orange;
+    font-size: 48px;
+}
+.slider p {
+    font-size: 18px;
+}
+section {
+    align-items: center;
+}
+.slider a
+{
+    padding: 10px 48px;
+    margin-right: 10px;
+    opacity: 2px;
+}
+.slider a.btn-half
+{
+    background-color: #03b1fc;
+    color: white;
+    transition: 0.3s ease-in;
+
+}
+.slider a.btn-half:hover
+{
+    background-color: #e03c00;
+}
+    </style>
+}
+</head>
+<body>
+    <header>
+         <div class="menu-toggle" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="overlay"></div>
+        <div class="container">
+            <nav>
+                <h1 class="brand"><a href="index.html">Br<span>a</span>nd</a></h1>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portofio</a></li>
+                    <li><a href="#">Price</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <main>
+        <section class="slider">
+            <ul class="slider-carousel" id="slider-carousel">
+                <li class="img1">
+                    <h1>TEMPLATE FOR <span class="span1">YOUR</span> COMPANY</h1>
+                    <p><br> WEBSIRE FOR BUSINESS</p><br>
+                    <p> Wed Nov 19 2014 <span class="span2"> 04:35</span><p><br>
+                    <a href="#" class="btn btn-half"> JOIN US </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    </header>
+</body>
+<script type="text/javascript">
+    var open = document.getElementById('hamburger');
+var changeIcon = true;
+
+open.addEventListener("click", function(){
+
+    var overlay = document.querySelector('.overlay');
+    var nav = document.querySelector('nav');
+    var icon = document.querySelector('.menu-toggle i');
+
+    overlay.classList.toggle("menu-open");
+    nav.classList.toggle("menu-open");
+
+    if (changeIcon) {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-times");
+
+        changeIcon = false;
+    }
+    else {
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
+        changeIcon = true;
+    }
+});
+</script>
+</html>

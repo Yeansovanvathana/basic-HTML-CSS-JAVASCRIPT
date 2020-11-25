@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Login Form Design</title>
+    <link rel="stylesheet" type="text/css" href="loginform.css">
+    <script>
+    function letters_number()
+  {
+    var name=document.Login.name.value;
+    var password=document.Login.password.value;
+    r=/^[A-Za-z]\w{7,14}$/;
+    if(password.match(r))
+    {
+      alert('you register number have accepted');
+      return true;
+    }
+    else if (password.length<6) 
+    {
+      alert('Password must be at least 6 characters long.');
+      return false;
+    }
+  }
+    
+  </script>
+</head>
+<body>
+    <div class="loginbox">
+        <h1>Login account</h1>
+        <form name="Login" method="post" onsubmit="return letters_number()">
+            <p>Username</p>
+            <input type="text" name="name" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password">
+            <input type="submit" value="Login">
+            <a href="signup.html">SignUp</a><br> 
+            <a href="#">Lost your password?</a><br>
+            <a href="#">Don't have an account?</a>
+        </form>
+    </div>
+</body>
+</html>

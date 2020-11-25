@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>even or odd</title>
+	<script>
+	function calc()
+	{
+		var n1 =
+		parseFloat (document.getElementById('n1').value);
+		var oper =
+		document.getElementById('operators').value;
+		if(oper == 'even')
+		{
+			document.getElementById('result').value=n1%2==0;
+		}
+		if(oper == 'odd')
+		{
+			document.getElementById('result').value=n1%2!=0;
+		}
+	}
+	</script>
+</head>
+<body>
+	<input type="text" id="n1"/><br>
+	<select id="operators">
+		<option value="even">even</option>
+		<option value="odd">odd</option>
+	</select>
+	<button onclick="calc();">=</button>
+	<input type="text" id="result"/>
+
+</body>
+</html>

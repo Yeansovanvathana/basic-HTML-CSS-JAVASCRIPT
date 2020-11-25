@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Favorite Song</title>
+	<script
+	  src="https://code.jquery.com/jquery-3.4.1.js"
+	  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	  crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+	<h1 align="center" id="h1">My Heart Will Go On</h1>
+	<div class="container-fluid">
+		<div class="row"></div>
+		<div class="row">
+		<div class="col-sm-4">
+			<div class="row">
+				<img id="img" src="https://upload.wikimedia.org/wikipedia/en/e/e0/Celine_dion-my_heart_will_go_on_s.jpg" width="80%" >
+			</div>
+		</div>
+		<div class="col-sm-8">
+			<p style="display: none;" id="text" align="lifetime">Every night in my dreams <br>
+				I see you, I feel you <br>
+				That is how I know you go on <br>
+				Far across the distance <br>
+				And spaces between us <br>
+				You have come to show you go on <br>
+				Near, far, wherever you are <br>
+				I believe that the heart does go on <br>
+				Once more you open the door <br>
+				And you're here in my heart <br>
+				And my heart will go on and on <br>
+				Love can touch us one time <br>
+				And last for a lifetime <br>
+				And never let go 'til we're gone <br>
+				Love was when I loved you <br>
+				One true time I'd hold to <br>
+				In my life we'll always go on <br>
+				Near, far, wherever you are <br>
+				I believe that the heart does go on <br>
+				Once more…</p>
+		</div>
+	</div>
+	</div>
+	<script type="text/javascript">
+			$(document).ready(function() {
+				$('#h1').on('click', function(event) {
+					event.preventDefault();
+					/* Act on the event */
+					$('#h1').html('<h1>Prank</h1>');
+				});
+				$('#img').on('click',function(event) {
+					event.preventDefault();
+					/* Act on the event */
+					$('#text').toggle();
+				});
+			});
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script>
+function letters_num(inputtxt)
+{ 
+var letters = /^[0-9a-zA-Z]+$/;
+if(inputtxt.value.match(letters))
+{
+alert('Your registration number have accepted : you can try another');
+document.form1.text1.focus();
+return true;
+}
+else
+{
+alert('Please input alphanumeric characters only');
+return false;
+}
+}
+</script>
+</head>
+<body>
+<form name="myform" method="post" onsubmit="return validateform()" >
+Name: <input type="text" name="name"><br/>
+Password: <input type="password" name="password"><br/>
+<input type="submit" value="register">
+</form>
+</body>
+</html>
