@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		{{computeName}}
+	</div>
+<script>
+	new Vue({
+		el:'#app',	
+		data:{
+			name:'Vathana'
+		},
+		computed:{
+			computeName: function(){
+				var reverse = this.name.split('').reverse().join('')
+				console.log(reverse	)
+			}
+		}
+	})
+</script>
+</body>
+</html>	
+<!-- Computed use when you’re building something where you need to sort through a large group of data and you don’t want to rerun those calculations on every keystroke. -->

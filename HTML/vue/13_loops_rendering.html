@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+	<table>
+		<ol>
+			<li v-for="item in table_details">
+    			{{item.id}}: {{ item.name }}: {{item.age}}
+  			</li>
+		</ol>
+	</table>
+	</div>
+<script>
+	new Vue({
+		el:'#app',	
+		data:{
+			
+			table_details: [
+      		{'id':1, name:'vathana','age':18 },
+      		{'id':2, name:'Rathana','age':19 },
+      		{'id':3, name:'Rathanak','age':16},
+			{'id':4, name:'vanna', 'age':19},
+			{'id':5, name:'sovan', 'age':20}]
+		}
+	});
+</script>
+</body>
+</html>

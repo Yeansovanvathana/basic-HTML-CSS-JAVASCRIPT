@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>check text</title>
+	<script type="text/javascript">
+		function vathana(){
+			var a=(document.getElementById('mytext').value);
+			if (a.value != "")
+			{
+				alert("you entered :"+a);
+			}
+			else
+			{
+				alert("please enter some text");
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="mytext">
+	<input type="button" onclick="vathana();" value="check form">
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<button @click="helloMethods">Click</button>
+	</div>
+<script>
+	new Vue({
+		el:'#app',	
+		methods: {
+    		helloMethods:function () {
+      			console.log("Hello from the Vue method")
+    	}
+    }
+})
+</script>
+</body>
+</html>
+<!-- Methods is a function associated with the Vue instance.it's especially useful when you need to perform an action and you attach a v-on directive on an element to handle events. -->

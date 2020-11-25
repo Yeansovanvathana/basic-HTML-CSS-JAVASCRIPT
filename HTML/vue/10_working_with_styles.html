@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id = "app">
+         <h1 :style = "mystyle1" @mouseover = "mouseover" @mouseleave = "mouseleave">
+         	{{message}}
+         </h1>
+      </div>
+<script>
+new Vue({
+    el: '#app',
+    data: {
+        message: 'Hello World',
+        mystyle1: {
+            color: 'blue',
+            fontSize: '30px'
+        }
+    },
+    methods: {
+        mouseover() {
+            this.mystyle1.color = 'green'
+            this.mystyle1.fontSize = '50px'
+        },
+        mouseleave() {
+            this.mystyle1.color = 'blue'
+            this.mystyle1.fontSize = '30px'
+        }
+    }
+});
+</script>
+</body>
+</html>

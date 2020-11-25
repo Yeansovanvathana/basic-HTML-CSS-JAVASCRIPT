@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>animation</title>
+	<style type="text/css">
+		div{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100px;
+			height:100px;
+			background-color: yellow;
+			position: relative;
+			animation-name: vathana;
+			animation-duration: 5s;
+
+		}
+		@keyframes vathana{
+		0%   {background-color:yellow; left:0px; top:0px;}
+  		60%  {background-color:yellow; left:50%; top:300px;transform: scale(3,1);transform: translate(-50%-50%);}
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

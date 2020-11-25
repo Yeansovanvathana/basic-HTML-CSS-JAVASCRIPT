@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<style>
+  .hovered{
+      color:blue;
+      font-size:40px;
+    }
+  .nothovered{
+      color: red;
+      font-size:30px;
+    }
+    </style>
+</head>
+<body>
+    <div id="app">
+      <h1 @mouseover="mouseover" @mouseleave="mouseleave"
+        :class="[isActive ? 'hovered' : 'nothovered']">
+        	{{ message }}
+      </h1>
+    </div>
+<script >
+    new Vue({
+		el: "#app",
+	    data: {
+		    message:'Hello World',
+	        isActive: false
+	},
+    methods: {
+        mouseover() {
+            this.isActive = true;
+        },
+        mouseleave() {
+            this.isActive = false;
+        }
+    }
+});
+
+</script>
+</body>
+</html>

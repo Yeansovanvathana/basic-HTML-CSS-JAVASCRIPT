@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<h1>
+			<a v-bind:href="google"> https://www.google.com</a>
+		</h1>
+		<h1>
+			<a v-bind:href="facebook">https://www.facebook.com </a>
+		</h1>
+	</div>
+	<script>
+		new Vue({
+			el:'#app',
+			data:{
+				google:'https://www.google.com/',
+				facebook:'https://www.facebook.com/'
+			}
+		})
+	</script>
+</body>
+</html>

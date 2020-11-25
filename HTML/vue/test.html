@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>12_working_conditionals</title>
+    </head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <div id="app">
+    <input placeholder="Enter your name here" V-model="name" type="input">
+    <h1 v-if="name==='arun'" style="color:blue;"> Granted welcome Mr/Ms.{{name}}</h1>
+    <h1 v-else="name!='arun'" style="color:red;">Access Denied Sorry Mr/Ms.{{name}}</h1>
+
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                name:"",
+                isActive:true
+                }
+        });
+    </script>
+</body>
+    </html>
